@@ -3,10 +3,6 @@ const bodyParser = require('body-parser')
 const app = express();
 const upload = require('./router/upload');
 
-
-
-
-
 app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded({extended: true}));
  
@@ -28,11 +24,8 @@ app.get('/api', function (req, res) {
 });
 
 app.use('/api',upload);
- 
-
- 
+  
 const PORT = process.env.PORT || 3000;
- 
 app.listen(PORT, function () {
   console.log('Node.js server is running on port ' + PORT);
 });
